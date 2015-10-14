@@ -4,6 +4,19 @@
 sudo apt-get --yes --force-yes update
 #sudo apt-get --yes --force-yes dist-upgrade
 
+# Add screen settings and power usage
+if grep -c "max_usb_current=1" /boot/config.txt; then
+    echo YES
+else
+    sudo sh -c "sudo echo hdmi_force_hotplug=1 >> /boot/config.txt"
+    sudo sh -c "sudo echo hdmi_group=2 >> /boot/config.txt"
+    sudo sh -c "sudo echo hdmi_mode=1 >> /boot/config.txt"
+    sudo sh -c "sudo echo hdmi_mode=87 >> /boot/config.txt"
+    sudo sh -c "sudo echo hdmi_cvt 800 480 60 6 0 0 0 >> /boot/config.txt"
+    sudo sh -c "sudo echo max_usb_current=1 >> /boot/config.txt"
+    sudo sh -c "sudo echo  >> /boot/config.txt"
+fi
+
 # free some space
 sudo apt-get --yes --force-yes remove --purge minecraft-pi 
 sudo apt-get --yes --force-yes remove --purge scratch
