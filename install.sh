@@ -57,7 +57,8 @@ sudo rm -f /home/pi/Desktop/python-games.desktop
 sudo rm -f /home/pi/Desktop/scratch.desktop
 sudo rm -f /home/pi/Desktop/sonic-pi.desktop
 sudo rm -f /home/pi/Desktop/wolfram-language.desktop
-sudo rm -f rm -f /home/pi/Desktop/wolfram-mathematica.desktop
+#sudo rm -f rm -f /home/pi/Desktop/wolfram-mathematica.desktop
+sudo rm -f /home/pi/.Mathematica
 
 # Install programs needed
 sudo apt-get --yes --force-yes install kodi
