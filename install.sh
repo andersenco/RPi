@@ -61,7 +61,11 @@ sudo rm -f /home/pi/Desktop/wolfram-language.desktop
 sudo rm -f /home/pi/.Mathematica
 
 # Install programs needed
-sudo apt-get --yes --force-yes install kodi
+sudo apt-get --yes --force-yes install kodi navit
+
+# Get maps needed
+#wget http://maps6.navit-project.org/api/map/?bbox=-17.6,34.5,42.9,70.9 -O /home/pi/.navit/western_europe.bin
+wget http://maps6.navit-project.org/api/map/?bbox=7.65,54.32,15.58,58.07 -O /home/pi/.navit/denmark.bin
 
 #./rpi-carpc.sh update all
 
