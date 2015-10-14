@@ -28,7 +28,7 @@ sudo apt-get --yes --force-yes remove --purge supercollider*
 sudo apt-get --yes --force-yes clean
 rm -r /home/pi/python_games/
 
-# install xbmc dependencies
+# install Kodi dependencies
 sudo apt-get --yes --force-yes install libssh-4
 sudo apt-get --yes --force-yes install libmicrohttpd10
 sudo apt-get --yes --force-yes install libtinyxml2.6.2
@@ -58,6 +58,9 @@ sudo rm -f /home/pi/Desktop/scratch.desktop
 sudo rm -f /home/pi/Desktop/sonic-pi.desktop
 sudo rm -f /home/pi/Desktop/wolfram-language.desktop
 sudo rm -f rm -f /home/pi/Desktop/wolfram-mathematica.desktop
+
+# Install programs needed
+sudo apt-get --yes --force-yes install kodi
 
 #./rpi-carpc.sh update all
 
