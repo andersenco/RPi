@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Update allmost all
+sudo apt-get --yes --force-yes update
+#sudo apt-get --yes --force-yes dist-upgrade
+
 # free some space
 sudo apt-get --yes --force-yes remove --purge minecraft-pi 
 sudo apt-get --yes --force-yes remove --purge scratch
