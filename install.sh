@@ -74,3 +74,23 @@ wget http://ftp.architektur.tu-darmstadt.de/debian/pool/main/n/navit-skin-neo-cs
 #./rpi-carpc.sh update all
 
 #sudo insserv /etc/init.d/splashscreen
+
+####################
+# GPS settings
+####################
+
+# Settings in /boot/cmdline.txt
+# remove console=ttyAMA0,115200 and if there, kgdboc=ttyAMA0,115200
+
+# Settings in /etc/inittab
+# add a # to the beginning of T0:23:respawn:/sbin/getty -L ttyAMA0 115200 vt100
+
+# Start daemon
+# sudo gpsd /dev/ttyAMA0 -F /var/run/gpsd.sock
+
+####################
+# Navit configuration
+####################
+
+# Use all map binfiles and not only map1.bin
+# <maps type="binfile" enabled="yes" data="$NAVIT_SHAREDIR/maps/*.bin"/>
