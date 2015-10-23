@@ -39,7 +39,7 @@ sudo apt-get --yes --force-yes install libpcrecpp0
 sudo apt-get --yes --force-yes install libmysqlclient-dev
 
 # Initialize the radio module
-sudo apt-get --yes --force-yes install python-smbus
+#sudo apt-get --yes --force-yes install python-smbus
 
 # Send click events to X windows
 sudo apt-get --yes --force-yes install xdotool
@@ -47,7 +47,7 @@ sudo apt-get --yes --force-yes install xdotool
 # gpsd and tools
 sudo apt-get --yes --force-yes install gpsd gpsd-clients
 
-sudo apt-get --yes --force-yes install espeak
+#sudo apt-get --yes --force-yes install espeak
 
 sudo rm -f /home/pi/Desktop/debian-reference-common.desktop
 sudo rm -f /home/pi/Desktop/epiphany-browser.desktop
@@ -64,8 +64,8 @@ sudo rm -f /home/pi/.Mathematica
 sudo apt-get --yes --force-yes install kodi navit
 
 # Get maps needed
-#wget http://maps6.navit-project.org/api/map/?bbox=-17.6,34.5,42.9,70.9 -O /home/pi/.navit/western_europe.bin
-wget http://maps6.navit-project.org/api/map/?bbox=7.65,54.32,15.58,58.07 -O /home/pi/.navit/denmark.bin
+#wget http://maps6.navit-project.org/api/map/?bbox=-17.6,34.5,42.9,70.9 -O ~/.navit/western_europe.bin
+wget http://maps6.navit-project.org/api/map/?bbox=7.65,54.32,15.58,58.07 -O ~/.navit/denmark.bin
 
 # Get Navit skin
 wget http://ftp.architektur.tu-darmstadt.de/debian/pool/main/n/navit-skin-neo-cs/navit-skin-neo-cs_1.0.tar.gz -O /home/pi/navit-skin-neo-cs_1.0.tar.gz
@@ -94,3 +94,9 @@ wget http://ftp.architektur.tu-darmstadt.de/debian/pool/main/n/navit-skin-neo-cs
 
 # Use all map binfiles and not only map1.bin
 # <maps type="binfile" enabled="yes" data="$NAVIT_SHAREDIR/maps/*.bin"/>
+
+# Perhaps includes can be used. Insert before </navit>
+# <xi:include href="$HOME/.navit/xml/gui.xml"/>
+
+sudo cp /etc/navit/navit.xml ~/.navit/navit.xml
+
