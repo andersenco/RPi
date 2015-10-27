@@ -25,6 +25,8 @@ sudo apt-get --yes --force-yes remove --purge debian-reference-*
 sudo apt-get --yes --force-yes remove --purge epiphany-browser*
 sudo apt-get --yes --force-yes remove --purge sonic-pi 
 sudo apt-get --yes --force-yes remove --purge supercollider*
+sudo apt-get --yes --force-yes remove --purge xpdf
+sudo apt-get --yes --force-yes remove --purge xarchiver
 sudo apt-get --yes --force-yes clean
 rm -r /home/pi/python_games/
 
