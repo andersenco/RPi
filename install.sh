@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Update allmost all
+# Update almost all
 sudo apt-get --yes --force-yes update
 #sudo apt-get --yes --force-yes dist-upgrade
 
