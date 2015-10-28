@@ -88,8 +88,7 @@ sudo sh -c "sudo sed -i 's/kgdboc=ttyAMA0,115200 //' /boot/cmdline.txt"
 
 # Settings in /etc/inittab
 # add a # to the beginning of T0:23:respawn:/sbin/getty -L ttyAMA0 115200 vt100
-sudo sh -c "sudo sed -i 's|T0:23:respawn:/sbin/getty -L ttyAMA0 115200 
-vt100|#T0:23:respawn:/sbin/getty -L ttyAMA0 115200 vt100|' /etc/inittab"
+sudo sh -c "sudo sed -i 's|T0:23:respawn:/sbin/getty -L ttyAMA0 115200 vt100|#T0:23:respawn:/sbin/getty -L ttyAMA0 115200 vt100|' /etc/inittab"
 
 # Start daemon
 sudo gpsd /dev/ttyAMA0 -F /var/run/gpsd.sock
