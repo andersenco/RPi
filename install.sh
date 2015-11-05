@@ -96,6 +96,7 @@ sudo sh -c "sudo sed -i 's|T0:23:respawn:/sbin/getty -L ttyAMA0 115200 vt100|#T0
 
 # Start daemon
 sudo gpsd /dev/ttyAMA0 -F /var/run/gpsd.sock
+sudo sh -c "sudo sed -i '/exit 0/i sudo gpsd /dev/ttyAMA0 -F /var/run/gpsd.sock' /etc/rc.local"
 
 ####################
 # Navit configuration
