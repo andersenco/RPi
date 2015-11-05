@@ -67,8 +67,8 @@ sudo apt-get --yes --force-yes install kodi navit
 
 # Get maps needed
 sudo mkdir -p /usr/share/navit/maps
-#wget http://maps6.navit-project.org/api/map/?bbox=-17.6,34.5,42.9,70.9 -O /usr/share/navit/maps/western_europe.bin
-wget http://maps6.navit-project.org/api/map/?bbox=7.65,54.32,15.58,58.07 -O /usr/share/navit/maps/denmark.bin
+#sudo wget http://maps6.navit-project.org/api/map/?bbox=-17.6,34.5,42.9,70.9 -O /usr/share/navit/maps/western_europe.bin
+sudo wget http://maps6.navit-project.org/api/map/?bbox=7.65,54.32,15.58,58.07 -O /usr/share/navit/maps/denmark.bin
 
 # Get Navit skin
 wget http://ftp.architektur.tu-darmstadt.de/debian/pool/main/n/navit-skin-neo-cs/navit-skin-neo-cs_1.0.tar.gz -O /home/pi/navit-skin-neo-cs_1.0.tar.gz
